@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주택담보대출 신청접수</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <link rel="stylesheet" href="../resource/reset.css">
+    <link rel="stylesheet" href="../resource/common.css">
+    <link rel="stylesheet" href="../resource/style.css">
+    <link rel="stylesheet" href="../resource/sub.css">
+
+</head>
+
+<body>
+    <header>
+        <div id="header">
+            <div class="header_inner flex">
+                <div class="btn-wrap">
+                    <a href="./사용자관리.html">사용자관리</a>
+                    <a href="javascript:;" role="button" onclick="window.open('../popup/sms.html', 'title', 'width=1150,height=800px')">SMS</a>
+                    <a href="javascript:;" role="button" onclick="window.open('../popup/신용조회동의목록.html', 'title', 'width=1150,height=600px')">신용조회동의목록</a>
+                </div>
+                <div>
+                    <button onclick="window.open('https://analytics.google.com/analytics/web/');" class="btn btn_gray btnInfoCancle top-btn" style="margin-right:10px">구글링크</button>
+                    <a href="#">로그아웃</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="menu-popup" data-item="sms"></div>
+    <div class="menu-popup" data-item="신용조회동의목록"></div>
+    <div class="contaioner_wrap clearfix">
+
+        <div class="side-wrap">
+            <div id="side">
+                <div class="side_top" style="display:flex;justify-content:center;">
+                    <a href="../main.html" class="clearfix">
+                        <img src="../resource/images/logo/logo.png" alt="">
+                    </a>
+                </div>
+                <!-- <div class="user">
+                    <a href="#" class="clearfix">
+                        <img src="../resources/admin/images/common/user_icon.png" alt="" class="user_icon">
+                        <span class="id">관리자(admin)</span>
+                    </a>
+                </div> -->
+                <div id="lefrMenu">
+                    <ul>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>개인신용대출 접수</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>개인신용대출 목록</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>햇살론 신청접수</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>햇살론 신청목록</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>햇살론 대출목록</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>사잇돌 접수</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>사잇돌 목록</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>차량후순위대출 접수</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>차량후순위대출 목록</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>자산보유자론 접수</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>자산보유자론 목록</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>주택담보대출 접수</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>주택담보대출 목록</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="content">
+            <div id="container">
+                <div class="inner">
+                    <div>
+                        <div class="sec_cont">
+                            <h4 class="cont_tit">본상담 조회(주택담보대출)</h4>
+                            <div class="r_search_box">
+                                <form name="mainForm" method="post">
+                                    <div class="scroll">
+                                        <table class="r_search_table no-fixed">
+                                            <colgroup>
+                                                <col style="width: 200px">
+                                                <col style="min-width: 100px">
+                                                <col style="width: 200px">
+                                                <col style="min-width: 100px">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th>이름</th>
+                                                    <td colspan="3">
+                                                        <input type="text" maxlength="100" style="width:200px;" title="상품명">
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <th>휴대폰번호</th>
+                                                    <td colspan="3" class="no-wrap">
+                                                        <select name="phoneNum">
+                                                            <option value="010">010</option>
+                                                            <option value="011">011</option>
+                                                            <option value="016">016</option>
+                                                            <option value="017">017</option>
+                                                            <option value="018">018</option>
+                                                            <option value="019">019</option>
+                                                        </select>
+                                                        -
+                                                        <input type="text" maxlength="4" style="width:100px; margin: 0 10px; padding: 0 10px;" title="상품명">
+                                                        -
+                                                        <input type="text" maxlength="4" style="width:100px; margin-left: 10px; padding: 0 10px;" title="상품명">
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <th>대출상품</th>
+                                                    <td>
+                                                        <p>주택담보대출</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="btn_center_gorup">
+                                        <div class=" right">
+                                            <button type="submit" class="btn btn_bk">확인</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery and jQuery UI Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../resource/js/common.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/i18n/jquery-ui-i18n.min.js"></script>
+
+    <script>
+
+
+
+    </script>
+</body>
+
+</html>

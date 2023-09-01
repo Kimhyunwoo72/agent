@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상담 신청정보</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <link rel="stylesheet" href="../resource/reset.css">
+    <link rel="stylesheet" href="../resource/common.css">
+    <link rel="stylesheet" href="../resource/style.css">
+    <link rel="stylesheet" href="../resource/sub.css">
+
+</head>
+
+<body>
+    <header>
+        <div id="header">
+            <div class="header_inner flex">
+                <div class="btn-wrap">
+                    <a href="./사용자관리.html">사용자관리</a>
+                    <a href="javascript:;" role="button" onclick="window.open('../popup/sms.html', 'title', 'width=1150,height=800px')">SMS</a>
+                    <a href="javascript:;" role="button" onclick="window.open('../popup/신용조회동의목록.html', 'title', 'width=1150,height=600px')">신용조회동의목록</a>
+                </div>
+                <div>
+                    <button onclick="window.open('https://analytics.google.com/analytics/web/');" class="btn btn_gray btnInfoCancle top-btn" style="margin-right:10px">구글링크</button>
+                    <a href="#">로그아웃</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="menu-popup" data-item="sms"></div>
+    <div class="menu-popup" data-item="신용조회동의목록"></div>
+    <div class="contaioner_wrap clearfix">
+
+        <div class="side-wrap">
+            <div id="side">
+                <div class="side_top" style="display:flex;justify-content:center;">
+                    <a href="../main.html" class="clearfix">
+                        <img src="../resource/images/logo/logo.png" alt="">
+                    </a>
+                </div>
+                <!-- <div class="user">
+                    <a href="#" class="clearfix">
+                        <img src="../resources/admin/images/common/user_icon.png" alt="" class="user_icon">
+                        <span class="id">관리자(admin)</span>
+                    </a>
+                </div> -->
+                <div id="lefrMenu">
+                    <ul>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>개인신용대출 접수</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>개인신용대출 목록</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>햇살론 신청접수</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>햇살론 신청목록</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>햇살론 대출목록</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>사잇돌 접수</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>사잇돌 목록</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>차량후순위대출 접수</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>차량후순위대출 목록</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>자산보유자론 접수</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>자산보유자론 목록</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>주택담보대출 접수</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>주택담보대출 목록</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="content">
+            <div id="container">
+                <div class="inner">
+                    <div>
+                        <div class="sec_cont">
+                            <div class="r_search_box">
+                                <form name="searchForm" action="">
+                                    <div class="scroll">
+                                        <h4 class="cont_tit">가상담 신청정보(햇살론)</h4>
+                                        <table class="r_search_table">
+                                            <colgroup>
+                                                <col style="width:150px;">
+                                                <col style="width:300px;">
+                                                <col style="width:150px;">
+                                                <col style="width:300px;">
+                                                <col style="width:150px;">
+                                                <col style="width:300px;">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th>구분</th>
+                                                    <td>
+                                                        <p>햇살론(근로자)</p>
+                                                    </td>
+                                                    <th>등록자</th>
+                                                    <td>
+                                                        910421
+                                                    </td>
+                                                    <th>담당CP</th>
+                                                    <td>
+                                                        <div class="filebox">
+                                                            <input style="width: 100px; max-width:230px;">
+                                                            <button href="#" class="btn btn_gray">조회</button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>성명</th>
+                                                    <td>
+                                                        <p>유승윤</p>
+                                                    </td>
+                                                    <th>주민번호</th>
+                                                    <td>
+                                                        910421-1******
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th>신청금액</th>
+                                                    <td>
+                                                        <div class="filebox">
+                                                            <input style="width: 100px; max-width:230px;"> 만원
+                                                        </div>
+                                                    </td>
+                                                    <th>월수령액</th>
+                                                    <td>
+                                                        <div class="filebox">
+                                                            <input style="width: 100px; max-width:230px;"> 원
+                                                        </div>
+                                                    </td>
+                                                    <th>연소득</th>
+                                                    <td>
+                                                        <div class="filebox">
+                                                            <input style="width: 100px; max-width:230px;"> 원
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>휴대폰번호</th>
+                                                    <td class="no-wrap">
+                                                        <select name="phoneNum" style="width: 50px;">
+                                                            <option value="010">010</option>
+                                                            <option value="011">011</option>
+                                                            <option value="016">016</option>
+                                                            <option value="017">017</option>
+                                                            <option value="018">018</option>
+                                                            <option value="019">019</option>
+                                                        </select>
+                                                        -
+                                                        <input type="text" maxlength="4" style="width:50px; margin: 0 10px; padding: 0 10px;" title="상품명">
+                                                        -
+                                                        <input type="text" maxlength="4" style="width:50px; margin-left: 10px; padding: 0 10px;" title="상품명">
+                                                    </td>
+                                                    <th>주거지소유구분</th>
+                                                    <td>
+                                                        <select name="team" id="" style="width: 100%;">
+                                                            <option value="선택">선택</option>
+                                                        </select>
+                                                    </td>
+                                                    <th>입사일자</th>
+                                                    <td>
+                                                        <input type="text" class="datepicker date_input" style="width: 100%;" id="datepicker1" autocomplete="off">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>고용구분</th>
+                                                    <td>
+                                                        <select name="team" id="" style="width: 100%;">
+                                                            <option value="선택">선택</option>
+                                                        </select>
+                                                    </td>
+                                                    <th>파일첨부</th>
+                                                    <td>
+                                                        <div class="filebox" style="white-space: nowrap;">
+                                                            <input class="upload-name" value="첨부파일" style="width: 100%; max-width:150px;">
+                                                            <label for="file-add">첨부하기</label>
+                                                            <input type="file" id="file-add" onchange="displayFileName()">
+                                                        </div>
+                                                    </td>
+                                                    <th>보증종류</th>
+                                                    <td>
+                                                        <select name="team" id="" style="width: 100%;">
+                                                            <option value="선택">선택</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>고객메모 <br> Chars : 0/0</th>
+                                                    <td colspan="5">
+                                                        <textarea name="prdItem7" id="prdItem7" style="width:100%;height:200px;" title="가입금액"></textarea>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="btn_center_gorup">
+                                        <div class=" right">
+                                            <button type="submit" class="btn btn_bk">대출신청</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery and jQuery UI Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../resource/js/common.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/i18n/jquery-ui-i18n.min.js"></script>
+
+    <script>
+        $(function () {
+            $("#datepicker1").datepicker({
+                dateFormat: 'yy-mm-dd',
+                prevText: '이전 달',
+                nextText: '다음 달',
+                changeYear: true, //option값 년 선택 가능
+                changeMonth: true, //option값  월 선택 가능   
+                monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+                dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+                dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+                showMonthAfterYear: true,
+                yearSuffix: '년'
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>

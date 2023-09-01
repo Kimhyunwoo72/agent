@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자산보유자론 신청접수-가상담 신청정보</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <link rel="stylesheet" href="../resource/reset.css">
+    <link rel="stylesheet" href="../resource/common.css">
+    <link rel="stylesheet" href="../resource/style.css">
+    <link rel="stylesheet" href="../resource/sub.css">
+
+</head>
+
+<body>
+    <header>
+        <div id="header">
+            <div class="header_inner flex">
+                <div class="btn-wrap">
+                    <a href="./사용자관리.html">사용자관리</a>
+                    <a href="javascript:;" role="button" onclick="window.open('../popup/sms.html', 'title', 'width=1150,height=800px')">SMS</a>
+                    <a href="javascript:;" role="button" onclick="window.open('../popup/신용조회동의목록.html', 'title', 'width=1150,height=600px')">신용조회동의목록</a>
+                </div>
+                <div>
+                    <button onclick="window.open('https://analytics.google.com/analytics/web/');" class="btn btn_gray btnInfoCancle top-btn" style="margin-right:10px">구글링크</button>
+                    <a href="#">로그아웃</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="menu-popup" data-item="sms"></div>
+    <div class="menu-popup" data-item="신용조회동의목록"></div>
+    <div class="contaioner_wrap clearfix">
+
+        <div class="side-wrap">
+            <div id="side">
+                <div class="side_top" style="display:flex;justify-content:center;">
+                    <a href="../main.html" class="clearfix">
+                        <img src="../resource/images/logo/logo.png" alt="">
+                    </a>
+                </div>
+                <!-- <div class="user">
+                    <a href="#" class="clearfix">
+                        <img src="../resources/admin/images/common/user_icon.png" alt="" class="user_icon">
+                        <span class="id">관리자(admin)</span>
+                    </a>
+                </div> -->
+                <div id="lefrMenu">
+                    <ul>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>개인신용대출 접수</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>개인신용대출 목록</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>햇살론 신청접수</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>햇살론 신청목록</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>햇살론 대출목록</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>사잇돌 접수</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>사잇돌 목록</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>차량후순위대출 접수</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>차량후순위대출 목록</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>자산보유자론 접수</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>자산보유자론 목록</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>주택담보대출 접수</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>주택담보대출 목록</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="content">
+            <div id="container">
+                <div class="inner">
+                    <div>
+                        <!-- 주소찾기 팝업 active : show -->
+                        <div class="admin-popup address ">
+                            <div class="admin-popup__inner">
+                                <h2 class="admin-popup__title">주소찾기</h2>
+                                <div class="admin-popup__cont">
+                                    <h3>새 주소(도로명/건물명/지번)로 찾기</h3>
+                                    <p class="admin-popup__cont-text">
+                                        도로명주소(신주소)를 이용하여 주소를 검색하실 수 있습니다. <br>
+                                        도로명을 모르시는 경우 읍/면/동 또는 건물명으로 검색하실 수 있습니다. <br>
+                                        찾고자 하시는 지역의 도로명을 입력하신 후 검색버튼을 클릭하세요. <br>
+                                        검색 후 주소를 선택 하시면 중앙회로부터 정제된 지번/도로명 주소가 나타납니다.
+                                    </p>
+                                    <table class="r_search_table mt30">
+                                        <colgroup>
+                                            <col style="width:200px;">
+                                            <col style="width:200px;">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>기본주소</th>
+                                                <td style="display: flex;">
+                                                    <select name="team" id="" style="min-width: 200px; margin-right: 10px;">
+                                                        <option value="선택">선택</option>
+                                                    </select>
+                                                    <select name="team" id="" style="min-width: 200px;">
+                                                        <option value="선택">선택</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>상세주소</th>
+                                                <td colspan="2">
+                                                    <div class="filebox">
+                                                        <input style="width: 405px;">
+                                                        <button href="#" class="btn btn_gray">검색</button>
+                                                    </div>
+                                                    <p class="color-main mt10">검색어 예 : 도로명(반포대로 58), 건물명(독립기념관), 지번(삼성동 25)</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <h4 class="sub-title mt60">※ 조회 후 우편번호를 클릭하여 나머지 주소를 입력해 주세요.</h4>
+                                    <div class="scroll mt10">
+                                        <table class="cont_table table-type03" style="table-layout:fixed;">
+                                            <colgroup>
+                                                <col style="width:10%">
+                                                <col style="width:50%">
+                                                <col style="width:20%">
+                                                <col style="width:20%">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>우편번호</th>
+                                                    <th>주소</th>
+                                                    <th>지하/지상</th>
+                                                    <th>건물명</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="4">
+                                                        <p>검색된 항목이 없습니다.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="javsscipt:;" class="color-black" role="button">08506</a></td>
+                                                    <td><a href="javsscipt:;" class="color-black" role="button">서울특별시 금천구 가산디지털1로 에이스하이엔드타워3차</a></td>
+                                                    <td>지상</td>
+                                                    <td>(가산동)</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <h4 class="sub-title mt60">※ 상세 주소(동/호 등)를 입력 하신 후 검색버튼을 눌르시면 정제된 주소를 보실 수 있습니다.</h4>
+                                    <div class="scroll mt10">
+                                        <table class="r_search_table">
+                                            <colgroup>
+                                                <col style="width:200px;">
+                                                <col style="width:200px;">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th>기본주소</th>
+                                                    <td colspan="2">
+                                                        서울특별시 금천구 가산디지털1로 에이스하이엔드타워3차
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>상세주소</th>
+                                                    <td colspan="2">
+                                                        <div class="filebox">
+                                                            <input style="width: 405px;">
+                                                            <button href="#" class="btn btn_gray">검색</button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="btn-type01 center mt20">
+                                            <button type="button" onclick="addressPopup()" class="btn_bk">저장</button>
+                                            <button type="button" onclick="addressPopup()">취소</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 대출상담사 팝업 active : show -->
+                        <div class="admin-popup counselor">
+                            <div class="admin-popup__inner">
+                                <h2 class="admin-popup__title">대출상담사 조회</h2>
+                                <div class="admin-popup__cont">
+                                    <table class="r_search_table">
+                                        <colgroup>
+                                            <col style="width:200px;">
+                                            <col style="width:auto;">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>대출상담사<span class="important color-red">*</span></th>
+                                                <td colspan="2">
+                                                    <div class="filebox">
+                                                        <input style="width: 300px;">
+                                                        <button href="#" class="btn btn_bk">검색</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <div class="scroll mt60">
+                                        <table class="cont_table table-type03" style="table-layout:fixed;">
+                                            <colgroup>
+                                                <col style="width:25%">
+                                                <col style="width:25%">
+                                                <col style="width:25%">
+                                                <col style="width:25%">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>상담사등록번호</th>
+                                                    <th>상담사이름</th>
+                                                    <th>업체명</th>
+                                                    <th>신청건수</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="4">
+                                                        <p>검색된 항목이 없습니다.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1111111111111</td>
+                                                    <td>홍길동</td>
+                                                    <td>(주)크레딧플러스</td>
+                                                    <td>0</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="btn-type01 center mt20">
+                                            <button type="button" onclick="counselorPopup()" class="btn_bk">저장</button>
+                                            <button type="button" onclick="counselorPopup()">취소</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sec_cont">
+                            <div class="r_search_box">
+                                <form name="searchForm" action="">
+                                    <div class="scroll">
+                                        <h4 class="cont_tit">가상담 신청정보</h4>
+                                        <table class="r_search_table">
+                                            <colgroup>
+                                                <col style="width:200px;">
+                                                <col style="width:200px;">
+                                                <col style="width:200px;">
+                                                <col style="width:200px;">
+                                                <col style="width:200px;">
+                                                <col style="width:200px;">
+                                            </colgroup>
+                                            <tbody>
+
+                                                <tr>
+                                                    <th>대출상담사<span class="important color-red">*</span></th>
+                                                    <td colspan="2">
+                                                        <div class="filebox">
+                                                            <input style="width: 100px; max-width:230px;">
+                                                            <input style="width: 100px; max-width:230px;">
+                                                            <button type="button" class="btn btn_gray" onclick="counselorPopup()">조회</button>
+                                                        </div>
+                                                    </td>
+                                                    <th>팀원배정<span class="important color-red">*</span></th>
+                                                    <td colspan="2">
+                                                        <select name="team" id="" style="width: 100%;">
+                                                            <option value=""></option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="scroll mt60">
+                                        <h4 class="cont_tit">고객정보</h4>
+                                        <table class="r_search_table">
+                                            <colgroup>
+                                                <col style="width:150px;">
+                                                <col style="width:300px;">
+                                                <col style="width:150px;">
+                                                <col style="width:300px;">
+                                                <col style="width:150px;">
+                                                <col style="width:300px;">
+                                            </colgroup>
+                                            <tbody>
+
+                                                <tr>
+                                                    <th>성명</th>
+                                                    <td>
+                                                        <p>유승윤</p>
+                                                    </td>
+                                                    <th>주민번호</th>
+                                                    <td>
+                                                        910421-1******
+                                                    </td>
+                                                    <th>띠/나이</th>
+                                                    <td>
+                                                        양띠 (만 32세)
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>휴대폰번호<span class="important color-red">*</span></th>
+                                                    <td class="no-wrap">
+                                                        <select name="phoneNum" style="width: 50px;" disabled>
+                                                            <option value="010">010</option>
+                                                            <option value="011">011</option>
+                                                            <option value="016">016</option>
+                                                            <option value="017">017</option>
+                                                            <option value="018">018</option>
+                                                            <option value="019">019</option>
+                                                        </select>
+                                                        -
+                                                        <input type="text" maxlength="4" style="width:50px; margin: 0 10px; padding: 0 10px;" title="상품명">
+                                                        -
+                                                        <input type="text" maxlength="4" style="width:50px; margin-left: 10px; padding: 0 10px;" title="상품명">
+                                                    </td>
+                                                    <th>휴대폰통신사</th>
+                                                    <td>
+                                                        <select name="team" id="" style="width: 100%;">
+                                                            <option value="선택">선택</option>
+                                                        </select>
+                                                    </td>
+                                                    <th>휴대폰명의관계</th>
+                                                    <td>
+                                                        <select name="team" id="" style="width: 30%;">
+                                                            <option value="선택">선택</option>
+                                                        </select>
+                                                        <input type="text" style="width: 66%;">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>지번 등본주소</th>
+                                                    <td colspan="5" class="flex">
+                                                        <div class="search-address">
+                                                            <a href="javascript:;" onclick="addressPopup()">우편번호 검색</a>
+                                                            <input type="text" style="width: 150px">
+                                                            <input type="text" style="width: 415px">
+                                                            <input type="text" style="width: 415px">
+                                                            <button type="button" class="input-arrow down"></button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>도로명 등본주소</th>
+                                                    <td colspan="5" class="flex">
+                                                        <div class="search-address">
+                                                            <a href="javascript:;" onclick="addressPopup()">우편번호 검색</a>
+                                                            <input type="text" style="width: 150px">
+                                                            <input type="text" style="width: 415px">
+                                                            <input type="text" style="width: 415px">
+                                                            <button type="button" class="input-arrow down"></button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="scroll mt60">
+                                        <h4 class="cont_tit">직군정보</h4>
+                                        <table class="r_search_table">
+                                            <colgroup>
+                                                <col style="width:200px;">
+                                                <col style="width:200px;">
+                                                <col style="width:200px;">
+                                                <col style="width:200px;">
+                                                <col style="width:200px;">
+                                                <col style="width:200px;">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th>직업구분<span class="important color-red">*</span></th>
+                                                    <td colspan="2">
+                                                        <select name="team" id="" style="width: 100%;">
+                                                            <option value="선택">선택</option>
+                                                        </select>
+                                                    </td>
+                                                    <th>직업직위<span class="important color-red">*</span></th>
+                                                    <td colspan="2">
+                                                        <div class="search-address">
+                                                            <a href="javascript:;">직업직위 검색</a>
+                                                        </div>
+                                                        <p class="color-gray mt10 fz18">급여소득자 > 일반기업 > 기타법인 > 대리</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="scroll mt60">
+                                        <h4 class="cont_tit">자산보유여부</h4>
+                                        <table class="r_search_table">
+                                            <colgroup>
+                                                <col style="width:200px;">
+                                                <col style="width:200px;">
+                                                <col style="width:200px;">
+                                                <col style="width:200px;">
+                                                <col style="width:200px;">
+                                                <col style="width:200px;">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th>설정비율 100% 초과</th>
+                                                    <td colspan="5">
+                                                        <input type="checkbox" style="width: 20px; height: 20px;">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>보험보유여부</th>
+                                                    <td colspan="5">
+                                                        <input type="checkbox" style="width: 20px; height: 20px;">
+                                                    </td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="scroll mt60">
+                                        <h4 class="cont_tit">소득확인</h4>
+                                        <table class="r_search_table">
+                                            <colgroup>
+                                                <col style="width:200px;">
+                                                <col style="width:290px;">
+                                                <col style="width:200px;">
+                                                <col style="width:290px;">
+                                                <col style="width:200px;">
+                                                <col style="width:290px;">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th>주소득확인서류<span class="important color-red">*</span></th>
+                                                    <td>
+                                                        <select name="team" id="" style="width: 191px;" disabled>
+                                                            <option value="선택">선택</option>
+                                                        </select>
+                                                    </td>
+                                                    <th>소득값</th>
+                                                    <td>
+                                                        <label>
+                                                            <input type="text"> 원
+                                                        </label>
+                                                    </td>
+                                                    <th>인정소득<span class="important color-red">*</span></th>
+                                                    <td>
+                                                        <label>
+                                                            <input type="text"> 원
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>개월수</th>
+                                                    <td>
+                                                        <input type="text">
+                                                    </td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div class="btn_center_gorup">
+                                        <div class=" right">
+                                            <button type="submit" class="btn btn_bk">정보저장</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery and jQuery UI Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../resource/js/common.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/i18n/jquery-ui-i18n.min.js"></script>
+
+    <script>
+
+
+
+    </script>
+</body>
+
+</html>

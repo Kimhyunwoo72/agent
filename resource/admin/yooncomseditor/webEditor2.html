@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko" class="ko">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes">
+	
+	<link rel="stylesheet" href="/resources/admin/yooncomseditor/stylesheets/style.css">
+	<link type="text/css" rel="stylesheet" href="/resources/admin/css/pc_editor_content.css"  />
+	<link type="text/css" rel="stylesheet" href="/resources/admin/css/mo_editor_content.css"  />
+	
+	<script type="text/javascript" src="/resources/admin/yooncomseditor/externalLib/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="/resources/admin/yooncomseditor/externalLib/jquery-ui-1.11.4.min.js"></script>
+	<script type="text/javascript" src="/resources/admin/yooncomseditor/javascripts/build/Editor.bundle.js"></script>
+	<script type="text/javascript" src="/resources/admin/yooncomseditor/javascripts/yooncomsEditor.js"></script>
+</head>
+<body>
+	<textarea name="cn" id="cn" class="form-control"></textarea>
+	<script type="text/javascript">
+		var txt_kr = '';
+		$(window).load(function(){	
+			txt_kr = parent.fn_editorLoad2(); // 내용 가져오기
+			yooncomsEditorLoad2('cn', txt_kr,'kr');
+			parent.f_yooncomsEditorLoad2(); // 부모쪽 아이프레임 안에 생성한 웹에디터 호출
+		});
+	</script>
+</body>
+</html>

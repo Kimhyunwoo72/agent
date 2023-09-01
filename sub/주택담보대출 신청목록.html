@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주택담보대출 신청목록</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <link rel="stylesheet" href="../resource/reset.css">
+    <link rel="stylesheet" href="../resource/common.css">
+    <link rel="stylesheet" href="../resource/style.css">
+    <link rel="stylesheet" href="../resource/sub.css">
+
+</head>
+
+<body>
+    <header>
+        <div id="header">
+            <div class="header_inner flex">
+                <div class="btn-wrap">
+                    <a href="./사용자관리.html">사용자관리</a>
+                    <a href="javascript:;" role="button" onclick="window.open('../popup/sms.html', 'title', 'width=1150,height=800px')">SMS</a>
+                    <a href="javascript:;" role="button" onclick="window.open('../popup/신용조회동의목록.html', 'title', 'width=1150,height=600px')">신용조회동의목록</a>
+                </div>
+                <div>
+                    <button onclick="window.open('https://analytics.google.com/analytics/web/');" class="btn btn_gray btnInfoCancle top-btn" style="margin-right:10px">구글링크</button>
+                    <a href="#">로그아웃</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="menu-popup" data-item="sms"></div>
+    <div class="menu-popup" data-item="신용조회동의목록"></div>
+    <div class="contaioner_wrap clearfix">
+
+        <div class="side-wrap">
+            <div id="side">
+                <div class="side_top" style="display:flex;justify-content:center;">
+                    <a href="../main.html" class="clearfix">
+                        <img src="../resource/images/logo/logo.png" alt="">
+                    </a>
+                </div>
+                <!-- <div class="user">
+                    <a href="#" class="clearfix">
+                        <img src="../resources/admin/images/common/user_icon.png" alt="" class="user_icon">
+                        <span class="id">관리자(admin)</span>
+                    </a>
+                </div> -->
+                <div id="lefrMenu">
+                    <ul>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>개인신용대출 접수</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>개인신용대출 목록</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>햇살론 신청접수</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>햇살론 신청목록</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>햇살론 대출목록</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>사잇돌 접수</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>사잇돌 목록</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>차량후순위대출 접수</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>차량후순위대출 목록</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>자산보유자론 접수</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>자산보유자론 목록</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>주택담보대출 접수</span></a>
+                        </li>
+                        <li id="snb_X" class="depth01">
+                            <a href="#"><span>주택담보대출 목록</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="content">
+            <div id="container">
+                <div class="inner">
+                    <div>
+                        <!-- 첨부파일 팝업 active : show -->
+                        <div class="admin-popup file">
+                            <div class="admin-popup__inner">
+                                <h2 class="admin-popup__title">첨부파일 등록</h2>
+                                <div class="admin-popup__cont">
+
+                                    <div class="scroll">
+                                        <table class="r_search_table no-fixed">
+                                            <colgroup>
+                                                <col style="width: 200px">
+                                                <col style="min-width: 100px">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th>파일구분</th>
+                                                    <td colspan="3">
+                                                        <select name="파일구분">
+                                                            <option value="선택">선택</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <th>파일제목</th>
+                                                    <td colspan="3" class="no-wrap">
+                                                        <input type="text" style="width: 100%;">
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <th>파일선택</th>
+                                                    <td>
+                                                        <div class="filebox">
+                                                            <input class="upload-name" value="첨부파일" style="width: 100%; max-width: 300px;">
+                                                            <label for="file-add">찾아보기</label>
+                                                            <input type="file" id="file-add" onchange="displayFileName()">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div class="scroll mt60">
+                                        <table class="cont_table table-type03" style="table-layout:fixed;">
+                                            <colgroup>
+                                                <col style="width:10%">
+                                                <col style="width:20%">
+                                                <col style="width:25%">
+                                                <col style="width:25%">
+                                                <col style="width:20%">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>NO</th>
+                                                    <th>구분</th>
+                                                    <th>제목</th>
+                                                    <th>원본파일명</th>
+                                                    <th>등록일시</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="5">
+                                                        <p>검색된 항목이 없습니다.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>jpeg</td>
+                                                    <td>양식.jpeg</td>
+                                                    <td>양식.jpeg</td>
+                                                    <td>2023-08-01</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="btn-type01 center mt20">
+                                            <button type="button" onclick="filePopup()" class="btn_bk">업로드</button>
+                                            <button type="button" onclick="filePopup()">취소</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 메모 팝업 active : show -->
+                        <div class="admin-popup memo">
+                            <div class="admin-popup__inner">
+                                <h2 class="admin-popup__title">메모</h2>
+                                <div class="admin-popup__cont">
+                                    <textarea class="textarea-box" title="가입금액">메모입니다.</textarea>
+                                    <div class="btn-type01 center mt20">
+                                        <button type="button" onclick="memoPopup()" class="btn_bk">등록</button>
+                                        <button type="button" onclick="memoPopup()">취소</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="sec_cont">
+                            <h4 class="cont_tit">검색조건 (신용카드이용자론)</h4>
+                            <div class="r_search_box">
+                                <form name="searchForm" method="get">
+                                    <div class="scroll">
+                                        <table class="r_search_table table-type02">
+                                            <colgroup>
+                                                <col style="width:132px">
+                                                <col style="width: 150px;">
+                                                <col style="width:132px">
+                                                <col style="width: 150px;">
+                                                <col style="width:132px">
+                                                <col style="width: 150px;">
+                                                <col style="width: 100px">
+                                                <col style="width: 100px">
+                                                <col style="width: 100px">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th>신청일자</th>
+                                                    <td colspan="5" class="no-wrap">
+                                                        <input type="text" class="datepicker date_input" style="width: 130px;" id="datepicker1" autocomplete="off"> ~
+                                                        <input type="text" class="datepicker date_input" style="width: 130px;" id="datepicker2" autocomplete="off">
+                                                        <label class="radio_box check"><input type="radio" name="date" value="당일" checked><span>당일</span></label>
+                                                        <label class="radio_box check"><input type="radio" name="date" value="전일"><span>전일</span></label>
+                                                        <label class="radio_box check"><input type="radio" name="date" value="주간"><span>주간</span></label>
+                                                        <label class="radio_box check"><input type="radio" name="date" value="월간"><span>월간</span></label>
+                                                        <label class="radio_box check"><input type="radio" name="date" value="당월"><span>당월</span></label>
+                                                        <label class="radio_box check"><input type="radio" name="date" value="전월"><span>전월</span></label>
+                                                    </td>
+                                                    <th>목록건수</th>
+                                                    <td>
+                                                        <select>
+                                                            <option value="" selected="">선택</option>
+                                                            <option value="1">1건</option>
+                                                            <option value="2">2건</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <th>검색조건</th>
+                                                    <td colspan="6">
+                                                        <select>
+                                                            <option value="" selected="">신청상태</option>
+                                                            <option value="가조회신청">가조회신청</option>
+                                                            <option value="가조회승인">가조회승인</option>
+                                                            <option value="가조회거절">가조회거절</option>
+                                                            <option value="CSS승인">CSS승인</option>
+                                                            <option value="CSS거절">CSS거절</option>
+                                                            <option value="신청완료">신청완료</option>
+                                                            <option value="심사취소">심사취소</option>
+                                                            <option value="심사승인">심사승인</option>
+                                                            <option value="심사부결">심사부결</option>
+                                                            <option value="심사중">심사중</option>
+                                                            <option value="12심사보류2">심사보류</option>
+                                                            <option value="결재완료">결재완료</option>
+                                                            <option value="차장부결">차장부결</option>
+                                                            <option value="최종승인완료">최종승인완료</option>
+                                                            <option value="보증실행완료">보증실행완료</option>
+                                                            <option value="기표완료">기표완료</option>
+                                                        </select>
+                                                        <label class="radio_box check"><input type="radio" name="검색조건" value="성명" checked><span>성명</span></label>
+                                                        <label class="radio_box check"><input type="radio" class="security-number" name="검색조건" value="주민번호"><span>주민번호</span><input type="text" class="security-number-text"
+                                                                style="margin-left: 10px;"></label>
+                                                    </td>
+
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="btn_right_gorup">
+                                        <button type="submit" class="btn btn_red">검색</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="content-body">
+                                <div class="table_tit">
+                                    <div class="table_left_title">
+                                        <span>총<strong class="totCnt" style="font-weight: 700;"> 10</strong>건 조회</span>
+                                    </div>
+                                </div>
+
+                                <form name="subForm" method="post" action="#">
+                                    <div class="scroll">
+                                        <table class="cont_table table-type03" style="table-layout:fixed;">
+                                            <colgroup>
+                                                <col style="width:50px">
+                                                <col style="width:100px">
+                                                <col style="width:120px">
+                                                <col style="width:120px">
+                                                <col style="width:120px">
+                                                <col style="width:100px">
+                                                <col style="width:100px">
+                                                <col style="width:100px">
+                                                <col style="width:120px">
+                                                <col style="width:120px">
+                                                <col style="width:100px">
+                                                <col style="width:50px">
+                                                <col style="width:100px">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>NO</th>
+                                                    <th>성명</th>
+                                                    <th>주민번호</th>
+                                                    <th>신청일자</th>
+                                                    <th>실행일자</th>
+                                                    <th>신청상태</th>
+                                                    <th>상담사</th>
+                                                    <th>전자서명</th>
+                                                    <th>한도금액</th>
+                                                    <th>대출금액</th>
+                                                    <th>금리</th>
+                                                    <th>파일</th>
+                                                    <th>메모</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="13">
+                                                        <p>검색된 항목이 없습니다.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>짱구님</td>
+                                                    <td>111111-1111111</td>
+                                                    <td>2023-01-14</td>
+                                                    <td>2023-01-14</td>
+                                                    <td>가조회 승인</td>
+                                                    <td>이혜리</td>
+                                                    <td>-</td>
+                                                    <td>1700</td>
+                                                    <td>1500</td>
+                                                    <td>10.52</td>
+                                                    <td>
+                                                        <a href="javascript:;" onclick="filePopup()">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30">
+                                                                <path
+                                                                    d="M319-250h322v-60H319v60Zm0-170h322v-60H319v60ZM220-80q-24 0-42-18t-18-42v-680q0-24 18-42t42-18h361l219 219v521q0 24-18 42t-42 18H220Zm331-554v-186H220v680h520v-494H551ZM220-820v186-186 680-680Z" />
+                                                            </svg>
+                                                        </a>
+                                                    </td>
+                                                    <td class="table_btn">
+                                                        <a href="#" class="btn btn_gray btnRowDelete" onclick="memoPopup()">보기</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery and jQuery UI Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../resource/js/common.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/i18n/jquery-ui-i18n.min.js"></script>
+
+    <script>
+
+
+
+    </script>
+</body>
+
+</html>
